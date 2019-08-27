@@ -4,8 +4,8 @@ import './BarChart.css'
 
 function BarChart(data)
 {
-	const canvasHeight = 240;
-	const scale = 240.0;
+	const canvasHeight = 227;
+	const scale = 227.0;
 
 	d3.selectAll("svg").remove();
 
@@ -14,8 +14,8 @@ function BarChart(data)
         // Build the svg canvas
  		const svg = d3.select("#chart")
 		.append("svg")
-		.attr("width", 320)
-		.attr("height",240);
+		.attr("width", 227)
+		.attr("height",227);
 
         // Add the probabilities
 		svg.selectAll("rect")

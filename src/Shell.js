@@ -4,6 +4,7 @@ import './Shell.css';
 import BarChart from './BarChart.js'
 import Title from './Title.js'
 import Footer from './Footer'
+import FileUpload from './FileUpload'
 
 class Shell extends Component
 {
@@ -15,13 +16,13 @@ class Shell extends Component
 		return (
 			<div className="container">
 				<header className="header-container">
-                <Title /> 
+                    <Title /> 
 				</header>
 
 				<div className="main-container">
-                
-                <img id="img" crossOrigin="anonymous" width="320" height="240" src="https://media.istockphoto.com/photos/snail-picture-id511478884" />
-                <BarChart data={this.props.data} />
+                    <FileUpload />
+                    <img id="img" crossOrigin="anonymous" width="227" height="227" src="https://i.imgur.com/uVB1HOu.jpg" />
+                    <BarChart data={this.props.data} />
 				</div>
 			
 				<footer className="footer-container"> 
