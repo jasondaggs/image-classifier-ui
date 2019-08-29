@@ -12,30 +12,12 @@ const IMAGE_URL='https://media.istockphoto.com/photos/snail-picture-id511478884'
 
 class App extends Component {
 
-	constructor(props)
-	{
-		super(props);
-		this.state =  {label : "Loading"};
-	}
-
-    	componentDidMount()
-    	{
-    		const loadModel = async () => {
-    			const model = await mobilenet.load();
-    			const imageEl = document.getElementById('img');
-    	    		const result = await model.classify(imageEl);
-			this.setState({label: "Done",result:result});
-    		}
-
-    		loadModel();
-    	}
-
      	render ()
 	{
       		return (
-                <Shell data={this.state.result}/>
+                <Shell />
             )
-      } 
+      	} 
 }
 
 export default App;
