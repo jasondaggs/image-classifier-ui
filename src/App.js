@@ -1,5 +1,5 @@
 // Image Classifier
-import React,{Component} from 'react';
+import React from 'react';
 import Classifier from './Classifier.js'
 import './App.css';
 

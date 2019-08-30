@@ -1,4 +1,4 @@
-import React, {Component,useState,useEffect} from 'react'
+import React from 'react'
 import * as d3 from 'd3'
 import './BarChart.css'
 
@@ -25,7 +25,7 @@ function BarChart(data)
 		.attr("x",(d,i) => i * 30 + 10)
 		.attr("y", (d) => canvasHeight - d.probability * scale)
 		.attr("height",(d) => d.probability * scale)
-		.attr("fill",(d,i) => i == 0 ? "blue": i == 1 ? "green" : "yellow");
+		.attr("fill",(d,i) => i === 0 ? "blue": i === 1 ? "green" : "yellow");
 
         // Add the legend
         var legend = svg.selectAll(".legend")
@@ -39,7 +39,7 @@ function BarChart(data)
 		.attr("height",20)
 		.attr("x",10)
 		.attr("y",(d,i) => i * 30 )
-		.attr("fill",(d,i) => i == 0 ? "blue": i == 1 ? "green" : "yellow");
+		.attr("fill",(d,i) => i === 0 ? "blue": i === 1 ? "green" : "yellow");
 
         // Add legend labels
         legend.append("text")

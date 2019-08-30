@@ -8,11 +8,6 @@ import './ClassifierView.css'
 
 class ClassifierView extends Component
 {
-    constructor(props)
-    {
-        super(props);
-    }
-
     render() {
     return (
         <div className="container">
@@ -20,11 +15,13 @@ class ClassifierView extends Component
                    <Title /> 
 		    </header>
 			<div className="main-container">
-                   <img id="img" crossOrigin="anonymous" width="227" height="227" src={this.props.model.initialImage} />
-			   	   <input type="file" id="single" onChange={this.props.model.handleChange} /> 
-                   <h2 style={{color: 'black'}} >{this.props.model.fileName} </h2>
+	    		<div className="grid-container">
+                   <img alt="classification target" id="img" crossOrigin="anonymous" width="227" height="227" src={this.props.model.initialImage} />
+	   	   <input type="file" id="single" onChange={this.props.model.handleChange} /> 
+                   <div style={{color: 'black'}} >{this.props.model.fileName} </div>
                    <BarChart data={this.props.model.result} />
-                   <h2 style={{color: 'black'}} >Status: {this.props.model.status} </h2>
+                   <div style={{color: 'black'}} >Status: {this.props.model.status} </div>
+	    		</div>
 			</div>
 			    <footer className="footer-container"> 
                     <Footer />                

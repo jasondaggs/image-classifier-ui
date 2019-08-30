@@ -22,6 +22,7 @@ html,body {
 	display: flex;
 	flex-direction: row;
 	padding: 0px;
+	margin: auto;	
 }
 
 .header-container
@@ -36,3 +37,8 @@ html,body {
 	background-color: #5c7080
 }
 
+.grid-container
+{
+	display:grid;
+	grid-template-columns:auto auto;
+}
